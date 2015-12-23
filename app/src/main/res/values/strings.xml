@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">SecondInterviewTest</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="tasks">Tasks</string>
+    <string name="companyname">Shore GmbH</string>
+
+    <string name="dashboard_drawer_fix_bug">Fix the bug</string>
+    <string name="dashboard_drawer_implement_feature">Implement the feature</string>
+
+    <string name="dashbord_content">You have two tasks to complete. One is a bug fix and the other is an feature implementation. If you have any questions ask the DROID\n\nTask One (Bug Fix)\nWhen you edit the object the details view is not updated properly\n\nTask Two (Feature Implementation)\nPlease implement a listview of some JSON data download from the network using the Foo request. The FooRequest is implemented and should provide you with the data required.</string>
+    <string name="feature_content">Please implement the list feature here. All information should be contained on the worksheet. If you need anything clarified then please ask</string>
+
+    //activity titles
+    <string name="dashboard_title">Shore Challenge 2016</string>
+    <string name="feature_title">Implement Feature</string>
+    <string name="detail_title">Details</string>
+    <string name="edit_title">Edit</string>
+
+    //menu items
+    <string name="menu_item_edit">Edit</string>
+    <string name="menu_item_save">Save</string>
+
+    //Hints
+    <string name="hint_navigate_tasks">Navigate to the tasks via the naviagtion drawer</string>
+    <string name="hint_fix_bug">Do you know how the Activity and Fragment interact?</string>
+
+</resources>

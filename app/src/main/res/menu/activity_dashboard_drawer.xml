@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/tasks">
+        <menu>
+            <item
+                android:id="@+id/nav_fix_bug"
+                android:icon="@mipmap/ic_looks_one_white_24dp"
+                android:title="@string/dashboard_drawer_fix_bug" />
+            <item
+                android:id="@+id/nav_implement_feature"
+                android:icon="@mipmap/ic_looks_two_white_24dp"
+                android:title="@string/dashboard_drawer_implement_feature" />
+        </menu>
+    </item>
+
+</menu>
