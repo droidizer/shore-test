@@ -5,8 +5,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -41,13 +39,6 @@ public class DetailsActivity extends BaseActivity {
             ft.commit();
         }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, R.string.hint_fix_bug, Snackbar.LENGTH_LONG).show();
-            }
-        });
     }
 
 
@@ -69,6 +60,7 @@ public class DetailsActivity extends BaseActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 
 
     /**
@@ -118,8 +110,8 @@ public class DetailsActivity extends BaseActivity {
         private void updateUIValues() {
             if (contact != null) {
                 nameTextView.setText(contact.getName());
-                emailTextView.setText(contact.getEmailAddress());
-                phoneTextView.setText(contact.getPhoneNumber());
+                emailTextView.setText(contact.getEmail());
+                phoneTextView.setText(contact.getMobile());
             }
         }
 

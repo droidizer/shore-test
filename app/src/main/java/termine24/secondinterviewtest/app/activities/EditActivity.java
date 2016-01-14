@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -50,13 +48,6 @@ public class EditActivity extends BaseActivity {
             ft.commit();
         }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, R.string.hint_fix_bug, Snackbar.LENGTH_LONG).show();
-            }
-        });
     }
 
     @Override
@@ -116,12 +107,12 @@ public class EditActivity extends BaseActivity {
                 nameEditText.setText(contact.getName());
                 nameEditText.setSelection(position);
 
-                position = contact.getEmailAddress().length();
-                emailEditText.setText(contact.getEmailAddress());
+                position = contact.getEmail().length();
+                emailEditText.setText(contact.getEmail());
                 emailEditText.setSelection(position);
 
-                position = contact.getPhoneNumber().length();
-                phoneEditText.setText(contact.getPhoneNumber());
+                position = contact.getMobile().length();
+                phoneEditText.setText(contact.getMobile());
                 phoneEditText.setSelection(position);
             }
         }

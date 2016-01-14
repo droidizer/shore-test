@@ -25,8 +25,8 @@ public class Contact implements Parcelable, Serializable {
     };
 
     private String name;
-    private String emailAddress;
-    private String phoneNumber;
+    private String email;
+    private String mobile;
 
     public Contact() {
 
@@ -34,14 +34,14 @@ public class Contact implements Parcelable, Serializable {
 
     public Contact(String name, String emailAddress, String phoneNumber) {
         this.name = name;
-        this.emailAddress = emailAddress;
-        this.phoneNumber = phoneNumber;
+        this.email = emailAddress;
+        this.mobile = phoneNumber;
     }
 
     private Contact(Parcel in){
         this.name = in.readString();
-        this.emailAddress = in.readString();
-        this.phoneNumber = in.readString();
+        this.email = in.readString();
+        this.mobile = in.readString();
     }
 
 
@@ -53,8 +53,8 @@ public class Contact implements Parcelable, Serializable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(name);
-        parcel.writeString(emailAddress);
-        parcel.writeString(phoneNumber);
+        parcel.writeString(email);
+        parcel.writeString(mobile);
     }
 
 
@@ -66,20 +66,28 @@ public class Contact implements Parcelable, Serializable {
         this.name = name;
     }
 
-    public String getEmailAddress() {
-        return emailAddress;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
+    public void setEmail(String emailAddress) {
+        this.email = emailAddress;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setMobile(String phoneNumber) {
+        this.mobile = phoneNumber;
+    }
+
+    public boolean canMakePhoneCall() {
+        return this.mobile != null && !this.mobile.isEmpty();
+    }
+
+    public boolean canMessage() {
+        return this.email != null && !this.email.isEmpty();
     }
 
 }

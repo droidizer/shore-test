@@ -27,22 +27,19 @@
         <activity
             android:name="termine24.secondinterviewtest.app.activities.DetailsActivity"
             android:label="@string/detail_title"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name="termine24.secondinterviewtest.app.activities.EditActivity"
             android:label="@string/edit_title"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name="termine24.secondinterviewtest.app.activities.FeatureActivity"
             android:label="@string/feature_title"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

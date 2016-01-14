@@ -3,9 +3,12 @@ package termine24.secondinterviewtest.app.activities;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
+
 import termine24.secondinterviewtest.R;
+import termine24.secondinterviewtest.app.activities.dialog.DialogFactory;
 
 /**
  * Created by shanemurphy on 22/12/2015.
@@ -13,14 +16,18 @@ import termine24.secondinterviewtest.R;
  */
 public class BaseActivity extends AppCompatActivity {
 
+    protected ProgressBar loadingIndicator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         setBackNavigationOnActionbar();
+
+        //init loading indicator
+        loadingIndicator = (ProgressBar) findViewById(R.id.loadingindicator);
+        loadingIndicator.setVisibility(View.GONE);
     }
 
 
@@ -34,6 +41,24 @@ public class BaseActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void showLoadingIndicator() {
+        if (loadingIndicator != null) {
+            loadingIndicator.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void hideLoadingIndicator() {
+        if (loadingIndicator != null) {
+            loadingIndicator.setVisibility(View.GONE);
+        }
+    }
+
+
+    public void showErrorDialog(String errorMessage) {
+        DialogFactory.showErrorDialog(this, errorMessage);
+    }
+
 
     private void setBackNavigationOnActionbar() {
         ActionBar actionBar = getSupportActionBar();

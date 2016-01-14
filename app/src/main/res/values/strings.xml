@@ -7,10 +7,9 @@
     <string name="companyname">Shore GmbH</string>
 
     <string name="dashboard_drawer_fix_bug">Fix the bug</string>
-    <string name="dashboard_drawer_implement_feature">Implement the feature</string>
+    <string name="dashboard_drawer_implement_feature">Refactor the feature</string>
 
-    <string name="dashbord_content">You have two tasks to complete. One is a bug fix and the other is an feature implementation. If you have any questions ask the DROID\n\nTask One (Bug Fix)\nWhen you edit the object the details view is not updated properly\n\nTask Two (Feature Implementation)\nPlease implement a listview of some JSON data download from the network using the Foo request. The FooRequest is implemented and should provide you with the data required.</string>
-    <string name="feature_content">Please implement the list feature here. All information should be contained on the worksheet. If you need anything clarified then please ask</string>
+    <string name="dashbord_content">You have three tasks to complete.\n\n Task One is a bug fix.\n  When you edit the object the details view is not updated properly. Please fix me. \n\n Task Two is to refactor a feature.\n This feature works but could the view holder pattern improve this? \n\nTask Three is to write some unit test on the Contact model object.\n\nIf you have any questions ask he interviewer he doesnt bite (much)</string>
 
     //activity titles
     <string name="dashboard_title">Shore Challenge 2016</string>
@@ -22,8 +21,13 @@
     <string name="menu_item_edit">Edit</string>
     <string name="menu_item_save">Save</string>
 
-    //Hints
-    <string name="hint_navigate_tasks">Navigate to the tasks via the naviagtion drawer</string>
-    <string name="hint_fix_bug">Do you know how the Activity and Fragment interact?</string>
+    //Dialogs
+    <string name="dialog_title_error">Error</string>
+
+    //Errrors
+    <string name="error_unknown_error">An error has occurred but no error messgae was given. Please investigate.</string>
+
+    //Buttons
+    <string name="button_OK">OK</string>
 
 </resources>
