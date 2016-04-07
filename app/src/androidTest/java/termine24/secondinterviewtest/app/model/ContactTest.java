@@ -29,8 +29,8 @@ public class ContactTest extends ParcelableTest {
     public void testConstructor() throws Exception {
         assertNotNull("Parameter constructor is returning null", contact);
         assertEquals("Name is not the same as the constructor received", name, contact.getName());
-        assertEquals("Email is not the same as the constructor received", email, contact.getEmailAddress());
-        assertEquals("PhoneNumber is not the same as the constructor received", phoneNumber, contact.getPhoneNumber());
+        assertEquals("Email is not the same as the constructor received", email, contact.getEmail());
+        assertEquals("PhoneNumber is not the same as the constructor received", phoneNumber, contact.getMobile());
     }
 
     //TODO implement test for 100% branch and function coverage
