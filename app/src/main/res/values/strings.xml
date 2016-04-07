@@ -9,7 +9,7 @@
     <string name="dashboard_drawer_fix_bug">Fix the bug</string>
     <string name="dashboard_drawer_implement_feature">Refactor the feature</string>
 
-    <string name="dashbord_content">You have three tasks to complete.\n\n Task One is a bug fix.\n  When you edit the object the details view is not updated properly. Please fix me. \n\n Task Two is to refactor a feature.\n This feature works but could the view holder pattern improve this? \n\nTask Three is to write some unit test on the Contact model object.\n\nIf you have any questions ask he interviewer he doesnt bite (much)</string>
+    <string name="dashbord_content">You have three tasks to complete.\n\n Task One is a bug fix.\n  When you edit the object the details view is not updated properly. Please fix me. \n\n Task Two is to refactor a feature.\n This feature works but could the view holder pattern improve this? \n\nTask Three is to write some unit test on the Contact model object.\n\nIf you have any questions ask the interviewer he doesnt bite (much)</string>
 
     //activity titles
     <string name="dashboard_title">Shore Challenge 2016</string>

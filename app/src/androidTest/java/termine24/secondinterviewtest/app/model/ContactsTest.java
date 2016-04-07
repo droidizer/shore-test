@@ -34,7 +34,7 @@ public class ContactsTest extends ParcelableTest {
 
     public void testParcelable() throws Exception {
         Parcel p = createParcel(contacts);
-        Contacts c = (Contacts) Contacts.CREATOR.createFromParcel(p);
+        Contacts c = Contacts.CREATOR.createFromParcel(p);
         assertNotNull("Empty constructor returning null", c);
         assertEquals("Contact size is not the same", c.size(), 1);
     }
