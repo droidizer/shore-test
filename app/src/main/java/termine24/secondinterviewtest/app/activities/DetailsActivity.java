@@ -61,8 +61,6 @@ public class DetailsActivity extends BaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
-
     /**
      * The fragment that displays the Details Screen
      */
@@ -106,7 +104,6 @@ public class DetailsActivity extends BaseActivity {
             }
         }
 
-
         private void updateUIValues() {
             if (contact != null) {
                 nameTextView.setText(contact.getName());
@@ -120,7 +117,7 @@ public class DetailsActivity extends BaseActivity {
             //Start Edit Activity and pass it the contact object that should be edited
             Intent intent = new Intent(getActivity(), EditActivity.class);
             intent.putExtra(Contact.EXTRA_CONTACT, (Parcelable)contact);
-            getActivity().startActivityForResult(intent, Contact.REQUEST_EDIT_CONTACT);
+            startActivityForResult(intent, Contact.REQUEST_EDIT_CONTACT); // Call startActivityForResult without getActivity()
         }
 
     }
