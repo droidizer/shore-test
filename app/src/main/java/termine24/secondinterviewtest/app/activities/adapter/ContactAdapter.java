@@ -49,13 +49,14 @@ public class ContactAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View contactView = inflater.inflate(R.layout.listitem_contact, parent, false);
 
-        TextView nameTextView = (TextView) contactView.findViewById(R.id.listitem_contact_name);
-        nameTextView.setText(contact.getName());
-        TextView phoneTextView = (TextView) contactView.findViewById(R.id.listitem_contact_phone);
-        phoneTextView.setText(contact.getMobile());
-        TextView emailTextView = (TextView) contactView.findViewById(R.id.listitem_contact_email);
-        emailTextView.setText(contact.getEmail());
-
+        ViewHolder viewHolder = new ViewHolder();
+        viewHolder.nameTextView = (TextView) contactView.findViewById(R.id.listitem_contact_name);
+        viewHolder.nameTextView.setText(contact.getName());
+        viewHolder.phoneTextView = (TextView) contactView.findViewById(R.id.listitem_contact_phone);
+        viewHolder.phoneTextView.setText(contact.getMobile());
+        viewHolder.emailTextView = (TextView) contactView.findViewById(R.id.listitem_contact_email);
+        viewHolder.emailTextView.setText(contact.getEmail());
+        convertView.setTag(viewHolder);
         return contactView;
     }
 
@@ -67,4 +68,10 @@ public class ContactAdapter extends BaseAdapter {
         }
         notifyDataSetChanged();
     }
+
+    static class ViewHolder {
+        TextView nameTextView;
+        TextView phoneTextView;
+        TextView emailTextView;
+      }
 }
